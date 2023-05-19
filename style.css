@@ -1,0 +1,215 @@
+/*
+ Theme Name: OKMG
+ Theme URI: https://okmg.com/
+ Author: Your Name
+ Author URI: https://okmg.com/
+ Description: A simple WordPress theme for development expirement
+ Version: 1.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain: okmg
+*/
+
+/*
+  Reset and basic styles
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    Header styles
+  */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+#hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-menu span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px;
+}
+
+#nav-links {
+  display: flex;
+}
+#nav-links.active {
+  display: flex !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  width: 100%;
+}
+#nav-links a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 20px;
+}
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  #hamburger-menu {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+  }
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*
+    Main content styles
+  */
+#content {
+  padding: 1rem;
+  background-image: url("assets/bottomshapesleft.svg"),
+    url("assets/bottomshapesright.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0% 103%, 100% 103%;
+}
+
+/*
+    Footer styles
+  */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.section-form {
+  background-color: #fff !important;
+  background: url("assets/blueformshape.svg") top right no-repeat,
+    url("assets/formblshape.svg") bottom left no-repeat,
+    url("assets/greenformshape.svg") bottom right no-repeat;
+  box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  padding: 20px 20px 120px;
+  max-width: 450px;
+  margin: 2em auto 5em;
+  position: relative;
+}
+.section-form::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("assets/triangle.svg");
+  background-repeat: no-repeat;
+  height: 41px;
+  width: 41px;
+  top: 30px;
+  right: -15px;
+}
+.section-form::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("assets/redshape.svg");
+  background-repeat: no-repeat;
+  height: 41px;
+  width: 41px;
+  top: 60px;
+  right: -25px;
+  z-index: -1;
+}
+
+.label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  background: #eeeeee;
+  padding: 5px;
+  font-size: 14px;
+  width: 100px;
+}
+.section-form .intro {
+  margin-bottom: 2em;
+}
+.section-form h1 {
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 0.6em;
+}
+.section-form h2 {
+  text-align: center;
+  font-size: 1.23077em;
+}
+.form-controls label {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  background: #eeeeee;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+input[type="text"] {
+  height: 35px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+  color: #cfcece;
+  font-weight: 300;
+  padding: 5px 10px;
+  border: none;
+  color: #555555;
+  font-weight: 300;
+}
+.submit-btn {
+  cursor: pointer;
+  margin: 20px 0;
+  padding: 5px 50px;
+  background: #333;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+select#Select {
+  width: 100%;
+  padding: 5px 10px;
+}
+.alert-danger {
+  background: red;
+  padding: 5px;
+  color: #fff;
+}
